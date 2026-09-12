@@ -35,7 +35,6 @@ _dolt_ vagy *dolt*
 
 **_dolt felkover_** vagy ***dolt felkover***
 
-hi
 ### Felsorolás
 ---
 
