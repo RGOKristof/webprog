@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bringakonyha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" defer></script>
+
+<body>
+    <a href="#main" class="skip-link">Ugras a tartalomra</a>
+    <header class="header">
+        <div class="container header-bar">
+            <a href="#main" class="logo">Bringakonyha</a>
+            <nav aria-label="Fo menu">
+                <ul class="nav-list">
+                    <li><a href="#workshops">Muhelyek</a></li>
+                    <li><a href="#about">Rolunk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container" id="main">
+        <section class="hero">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, excepturi debitis? Aperiam eos sit deserunt
+                suscipit.</p>
+        </section>
+        <section class="container" id="workshops" aria-labelledby="workshops-title">
+            <h2 id="workshops-title">Kovetkezo muhelyek</h2>
+            <div class="filters" role="group" aria-label="Szures tema szerint">
+                <button type="button" class="filter" data-category="all" aria-pressed="true">Osszes</button>
+                <button type="button" class="filter" data-category="basic" aria-pressed="false">Alapok</button>
+                <button type="button" class="filter" data-category="repair" aria-pressed="false">Szereles</button>
+                <button type="button" class="filter" data-category="touring" aria-pressed="false">Tura</button>
+            </div>
+            <p class="results" id="results" aria-live="polite"></p>
+            <ul class="card-grid" id="card-grid">
+                <li class="card">
+                    <span class="card-tag">Alapok</span>
+                    <h3 class="card-title">Defektjavitas</h3>
+                    <p class="card-date">szeptember 23., szerda 17:00</p>
+                    <p>Belso csereje es foltozas</p>
+                    <p class="card-seats">4 szabad hely</p>
+                </li>
+            </ul>
+        </section>
+        <section class="section" id="about" aria-labelledby="about-title">
+            <h2 id="about-title">Rolunk</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque pariatur quam ab, id similique rem, unde
+                facere tempore enim, temporibus magnam mollitia voluptatum?</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="container">Ujhelyi-Nagy Kristóf</p>
+    </footer>
+</body>
+
+</html>

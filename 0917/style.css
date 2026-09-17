@@ -1,0 +1,84 @@
+:root{
+    --paper: #eef1f0;
+    --white: #fff;
+    --ink: #12232b;
+    --muted: #4a6068;
+    --brand: #0d5c5a;
+    --hivis: #d7e64b;
+    --line: #c9d3d1;
+    --alert: #a6431f;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+}
+h1{
+    font-size: clamp(1.8rem, 1.2rem + 2.5vw, 3rem);
+    line-height: 1.15;
+}
+p{
+    max-width: 60ch;
+}
+
+:focus-visible{
+    outline: 3px solid var(--ink);
+    outline-offset: 2px;
+}
+.skip-link{
+    position: absolute;
+    top: -4rem;
+    left: .5rem;
+    z-index: 10;
+    background: var(--hivis);
+    color: var(--ink);
+    padding: .6rem 0;
+    font-weight: 700;
+    text-decoration: none;
+}
+.skip-link:focus{
+    top: .5rem;
+}
+.container{
+    width: min(100% - 2rem, 60rem);
+    margin-inline: auto;
+}
+.header{
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 4rem;
+}
+.logo{
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--ink);
+    text-decoration: none;
+}
+.nav-list{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-list a{
+    color: var(--ink);
+    text-decoration: none;
+    padding: .5rem 0;
+}
+.nav-list a:hover{
+    border-bottom: 2px solid var(--brand);
+}
