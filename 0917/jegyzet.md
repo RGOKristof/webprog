@@ -31,7 +31,6 @@
 >Egy toggle button-ra alakitja a sima buttont kinda haszontalan meg jobb is a sima buttont hasznalni ilyenre javascriptel. ***Nem biztos info, Dufkat meg kell kerdezni!*** 
 
 *(true/false/mixed[full bs])*
-
 ---
 ### aria-live
 >Ha valtozas tortenik az oldalon amit pont nem fokuszal a user akkor ez elmondja a usernek hogy mi valtozott es akkor amikor akarod pl. polite (a szoveg vegen mondja). Akkor trigger-elodik ha valtozas tortenik egy elemben aminek atributuma az `area-live` 
