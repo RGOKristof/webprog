@@ -18,7 +18,8 @@ const workshops = [
     date: "október 18., szombat 10:30", seats: 12,
     text: "Használt kerékpár átvizsgálása vásárlás előtt, pontról pontra." }
 ];
-
+// Orai munka:
+/*
 const grid = document.querySelector("#card-grid")
 const resuls = document.querySelector("#results")
 const filters = document.querySelector("#filters")
@@ -29,3 +30,22 @@ function render(list){
     console.log(item[title])
   });
 }
+*/
+// Ahogy én megoldanám(categoryt nem nagyon ertem hova kene):
+/*
+const grid = document.querySelector("#card-grid")
+  grid.innerHTML = "";
+workshops.forEach(element => {
+  grid.innerHTML +=
+  `
+  <li class="card">
+      <span class="card-tag">${element["label"]}</span>
+      <h3 class="card-title">${element["title"]}</h3>
+      <p class="card-date">${element["date"]}</p>
+      <p>${element["text"]}</p>
+      <p class="card-seats">${element["seats"]} szabad hely</p>
+  </li>
+  `;
+});
+*/
+//Cleancode:
