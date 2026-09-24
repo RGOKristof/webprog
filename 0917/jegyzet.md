@@ -1,6 +1,5 @@
 # 09.17.
 
-## New Things
 * Aria
   * [aria-label](#aria-label)
   * [aria-labelledby](#aria-labelledby)

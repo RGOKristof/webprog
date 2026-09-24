@@ -1,23 +1,32 @@
 # 09.24.
+* CSS
+  * [Attribute Selectors](#Attribute-Selectors)
+  * [Best grid-template-coloumn Setup](#Best-grid-template-coloumn-Setup)
+  * [prefers-reduced-motion](#prefers-reduced-motion)
 
-## Quick
+## CSS
+### Attribute Selectors
 
-### 1.
-atributum szerinti css bs 
+>Példa:
 ```CSS
-.filter[aria-pressed="true"]{
-    background: var(--ink);
-    color: var(--paper);
-}
+.classington[aria-pressed="true"]{...}
 ```
+>Az element query-je utan irjuk a kockas zarojelbe az atributum filtert.
+
 ---
-### 2.
+### Best grid-template-coloumn Setup
+>Ez a setup egy nagyon clean, szinte mar flex szeru grid flowt csinaln neked.
 ```CSS
-crazzy grid template     grid-template-columns: repeat(auto-fit, minmax(min(100%,16rem), 1fr));
+grid-template-columns:repeat(auto-fit, minmax(min(100%,16rem), 1fr));
 ```
+>`auto-fit`: annyi coloumn-ot csinal amennyit tud.
 
-### 3.
-motion reducement
+>`auto-fill` meg ures grideket is letrehoz csak hogy consistens maradjon.
+
+---
+### prefers-reduced-motion
+>Ezt csak straight up nem tudom hogy kene megjegyeznem ember meg szint sem valt ez a buzi ha jol irod, konkretan nem tudod ha jol mukodik... amugy gondolom browser settingsbol szedi az infot
+>Azert itt egy pelda:
 ```CSS
 @media (prefers-reduced-motion: reduce) {
     *{
@@ -27,12 +36,4 @@ motion reducement
 }
 ```
 
-
-## New Things
-* Aria
-  * [](#)
-* CSS
-  * [](#)
-* JS
-  * [](#)
 
