@@ -82,3 +82,88 @@ p{
 .nav-list a:hover{
     border-bottom: 2px solid var(--brand);
 }
+/*New*/
+
+.hover{
+    padding: 2.5rem 0;
+}
+.section{
+    margin-bottom: 3rem;
+}
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.filter{
+    font: inherit;
+    background: none;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .5rem 1rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+.filter[aria-pressed="true"]{
+    background: var(--ink);
+    color: var(--paper);
+}
+.result{
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,16rem), 1fr));
+}
+.card{
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 5px soli var(--brand);
+    padding: 1.2rem;
+}
+.card-title{
+    margin: .4rem 0;
+}
+.card-tag{
+    font-size: .8rem;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    border-radius: 999px; /*miafazom?*/
+    padding: .1rem .6rem;
+}
+.card-date{
+    color: var(--muted);
+    font-size: .9rem;
+    margin: 0 0 .6rem;
+}
+.card-seats{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.card-seats-low{
+    color: var(--alert);
+}
+.footer{
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 30rem) {
+    .header-bar{
+        justify-content: center;
+    }
+    .nav-list{
+        gap: 1rem;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *{
+        transition: .01s !important;
+        animation-duration: .01s !important;
+    }
+}
