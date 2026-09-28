@@ -49,3 +49,6 @@ workshops.forEach(element => {
 });
 */
 //Cleancode:
+function generateElement(element) {
+
+}
