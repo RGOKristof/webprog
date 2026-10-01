@@ -1,0 +1,90 @@
+function CreateNavbar() {
+    const body = document.body
+
+    //nav
+    const nav = document.createElement("nav")
+    nav.className = "navbar navbar-expand-lg bg-body-tertiary"
+    body.append(nav)
+
+    //div1
+    const div1 = document.createElement("div")
+    div1.className = "container-fluid"
+    nav.append(div1)
+
+    //a1
+    const a1 = document.createElement("a")
+    a1.className = "navbar-brand"
+    a1.href = "#"
+    a1.innerText = "Navbar"
+    div1.append(a1)
+
+    //button
+    const button = document.createElement("button")
+    button.className = "navbar-toggler"
+    button.type = "button"
+    button.setAttribute("data-bs-toggle","collapse")
+    button.setAttribute("data-bs-target","#navbarNav")
+    button.setAttribute("aria-controls","navbarNav")
+    button.setAttribute("aria-expanded","false")
+    button.setAttribute("aria-label","Toggle navigation")
+    div1.append(button)
+    //span
+    const span = document.createElement("span")
+    span.className = "navbar-toggler-icon"
+    button.append(span)
+
+    //div2
+    const div2 = document.createElement("div")
+    div2.className = "collapse navbar-collapse"
+    div2.id = "navbarNav"
+    div1.append(div2)
+
+    //ul
+    const ul = document.createElement("ul")
+    ul.className = "navbar-nav"
+    div2.append(ul)
+
+    //li1
+    const li1 = document.createElement("li")
+    li1.className = "nav-item"
+    const a2 = document.createElement("a")
+    a2.className = "nav-link active"
+    a2.setAttribute("aria-current","page")
+    a2.href = "#"
+    a2.innerText = "Home"
+    li1.append(a2)
+    ul.append(li1)
+
+    //li2
+    const li2 = document.createElement("li")
+    li2.className = "nav-item"
+    const a3 = document.createElement("a")
+    a3.className = "nav-link"
+    a3.href = "#"
+    a3.innerText = "Features"
+    li2.append(a3)
+    ul.append(li2)
+
+    //li3
+    const li3 = document.createElement("li")
+    li3.className = "nav-item"
+    const a4 = document.createElement("a")
+    a4.className = "nav-link"
+    a4.href = "#"
+    a4.innerText = "Pricing"
+    li3.append(a4)
+    ul.append(li3)
+
+    //li4
+    const li4 = document.createElement("li")
+    li4.className = "nav-item"
+    const a5 = document.createElement("a")
+    a5.className = "nav-link disabled"
+    a5.setAttribute("aria-disabled","true")
+    a5.innerText = "Disabled"
+    li4.append(a5)
+    ul.append(li4)
+
+
+}
+CreateNavbar()
