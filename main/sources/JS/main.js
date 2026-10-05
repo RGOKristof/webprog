@@ -45,10 +45,31 @@ workshops.forEach(element => {
       <p>${element["text"]}</p>
       <p class="card-seats">${element["seats"]} szabad hely</p>
   </li>
-  `;
+  `; 
 });
 */
 //Cleancode:
-function generateElement(element) {
-
+function GenerateElement(parentQuery="body",elementName="div",elementAttributes,elementInnerText="") {
+  const parentElement = document.querySelector(parentQuery)
+  const newElement = document.createElement(elementName)
+  newElement.innerText = elementInnerText
+  try {
+    for (let i = 0; i < elementAttributes.length; i++) {
+      newElement.setAttribute(elementAttributes[i][0],elementAttributes[i][1])
+    }
+  } catch (e) {console.log(`No attributes were set! Error: ${e}`)}
+  parentElement.append(newElement)
+  console.log("end")
 }
+
+
+let idk = "a"
+workshops.forEach(element => {
+  GenerateElement("#card-grid","li",[["class",`card ${idk}`]])
+  GenerateElement(`.${idk}`,"span",[["class","card-tag"]],element["label"])
+  GenerateElement(`.${idk}`,"h3",[["class","card-title"]],element["title"])
+  GenerateElement(`.${idk}`,"p",[["class","card-date"]],element["date"])
+  GenerateElement(`.${idk}`,"p",[],element["text"])
+  GenerateElement(`.${idk}`,"p",[["class","card-seats"]],`${element["seats"]} szabad hely`)
+  idk += "a"
+});

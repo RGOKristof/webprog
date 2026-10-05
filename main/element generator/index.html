@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element genereator</title>
+    <style>
+        *{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-area"></div>
+
+<script>
+    function GenerateElement(parentQuery="body",elementName="div",elementInnerText="",elementAttributes) {
+        const parentElement = document.querySelector(parentQuery)
+        const newElement = document.createElement(elementName)
+        newElement.innerText = elementInnerText
+        try {
+            for (let i = 0; i < elementAttributes.length; i++) {
+                newElement.setAttribute(elementAttributes[i][0],elementAttributes[i][1])
+            }
+        } catch (e) {console.log(`No attributes were set! Error: ${e}`)}
+        parentElement.append(newElement)
+        console.log("end")
+    }
+    GenerateElement(".test-area")
+</script>
+</body>
+</html>
