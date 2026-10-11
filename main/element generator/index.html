@@ -14,6 +14,7 @@
     <div class="test-area"></div>
 
 <script>
+    /*
     function GenerateElement(parentQuery="body",elementName="div",elementInnerText="",elementAttributes) {
         const parentElement = document.querySelector(parentQuery)
         const newElement = document.createElement(elementName)
@@ -26,7 +27,22 @@
         parentElement.append(newElement)
         console.log("end")
     }
-    GenerateElement(".test-area")
+    */
+
+    function GenerateElement(parentQuery="body",elementName="div",elementAttributes,elementInnerText="") {
+    const parentElement = document.querySelector(parentQuery)
+    const newElement = document.createElement(elementName)
+    newElement.innerText = elementInnerText
+    try {
+        for (let i = 0; i < elementAttributes.length; i++) {
+        newElement.setAttribute(elementAttributes[i][0],elementAttributes[i][1])
+        }
+    } catch (e) {console.log(`No attributes were set! Error: ${e}`)}
+    //parentElement.append(newElement)
+    return newElement
+    }
+    
+    console.log(GenerateElement())
 </script>
 </body>
 </html>
