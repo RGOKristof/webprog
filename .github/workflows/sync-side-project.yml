@@ -1,0 +1,42 @@
+name: Sync side-project to rgopages
+
+on:
+  push:
+    branches: [main]          # ha nálad master, írd át
+    paths:
+      - 'side-project-2048/**'
+  workflow_dispatch:           # kézi indítás is lehet
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout webprog
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Checkout rgopages
+        uses: actions/checkout@v4
+        with:
+          repository: RGOKristof1/RGOPages-Frontend
+          token: ${{ secrets.RGOPagesFrontend_Token }}
+          path: target
+
+      - name: Sync folder
+        run: |
+          mkdir -p target/2048
+          rsync -a --delete source/side-project-2048/ target/2048/
+
+      - name: Commit and push
+        working-directory: target
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A 2048
+          if git diff --cached --quiet; then
+            echo "No changes to sync"
+          else
+            git commit -m "Sync side-project-2048 from webprog@${GITHUB_SHA::7}"
+            git push
+          fi
