@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        branch: [main, live]
+        branch: [main, Live]
     steps:
       - name: Checkout webprog
         uses: actions/checkout@v4
