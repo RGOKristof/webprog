@@ -81,10 +81,10 @@ function createDropdownEntry(entry) {
   const content = entry.divider
     ? el("hr", { className: "dropdown-divider" })
     : el("a", {
-        className: "dropdown-item",
-        text: entry.text,
-        attrs: { href: entry.href },
-      });
+      className: "dropdown-item",
+      text: entry.text,
+      attrs: { href: entry.href },
+    });
   return el("li", {}, content);
 }
 function createNavDropdown({ text, items }) {
