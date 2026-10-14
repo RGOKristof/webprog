@@ -7,19 +7,28 @@ on:
       - 'side-project-2048/**'
   workflow_dispatch:           # kézi indítás is lehet
 
+concurrency:
+  group: sync-side-project-2048
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        branch: [main, live]
     steps:
       - name: Checkout webprog
         uses: actions/checkout@v4
         with:
           path: source
 
-      - name: Checkout rgopages
+      - name: Checkout rgopages (${{ matrix.branch }})
         uses: actions/checkout@v4
         with:
           repository: RGOKristof1/RGOPages-Frontend
+          ref: ${{ matrix.branch }}
           token: ${{ secrets.RGOPagesFrontend_Token }}
           path: target
 
