@@ -1,23 +1,43 @@
 # Main Jegyzet
 
 ## Jegyzettár
->*HTML
-    *
+>[JS](#java-script)
+>   * [Primitív Típusok](#primitív-típusok)
 
 
-## CSS
-### Súly Szabály
->Igy donti el a css hogy mit valtoztasson a HTML-ben:
+## Java Script
 
-szabaly     |id |class|tag|suly
---          |-- |--   |-- |--
-.card p     |0  |1    |1  |11
-.card . text|0  |2    |0  |20 (Ez lesz a legerősebb)
-article p   |0  |0    |2  |2
+### Primitív Típusok
+>***number:***
+>
+>   **Ez a sima szám magába foglalja a float, int stb.**
+>
+>***string:***
+>   * **Az alap string, lehet "" vagy ''**
+>***boolean:***
+>   * **true,false**
+>***undefined:***
+>   * **A variable that has not been assigned a value is of type `undefined`.**
+>   * **A function returns `undefined` if a value was not returned. Accessing a property that does not exist also returns `undefined`.**
+>   * **The void operator always returns `undefined`.**
+>***null:***
+>   * **A `null` primitive represents the intended absence of a value.**
+>***bigint:***
+>   * **64 bit szamnal nagyobb szamopkat tartalmaz csak onmagaval tud operalni sima number-el nem**
 
 
-([0910](/0910/jegyzet.md#css))
----
-
-## Breakpoints
-Egy jo oldal ami megmutatja az idealis breakpointokat egy oldalon: [Breakpoints](https://getbootstrap.com/docs/5.3/layout/grid/#example)
+### Referencia típusok
+>***object***
+>
+>
+>tömb
+>
+>
+>függvény
+>
+>
+>
+>
+>
+>
+>
