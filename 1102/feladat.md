@@ -4,7 +4,7 @@
 
 Időkeret: 45 perc. Elérhető pontszám: 50 pont.
 
-Név: ______________________   Osztály: ________
+Név:  Osztály: ________
 
 - Minden megoldás egyetlen `dolgozat.js` fájlba kerüljön, a feladatokat kommenttel válaszd el (pl. `// 1. feladat`).
 - Az eredményeket `console.log`-gal írd ki; a program Node.js-ben vagy a böngésző konzoljában is fusson hiba nélkül.
